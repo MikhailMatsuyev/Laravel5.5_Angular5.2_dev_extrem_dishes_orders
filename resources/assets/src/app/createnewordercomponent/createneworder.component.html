@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <h1 class="text-center">Создать новый заказ</h1>
+
+    <div class="input-group row justify-content-center">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Введите дату заказа</span>
+        </div>
+        <input type="date" #dataBox class="form-control col-2" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+
+
+    <button type="button"
+            class="btn btn-danger mx-auto btn-in-create-order"
+            (click)="createOrder(dataBox.value)" >
+      Создать
+    </button>
+    <dx-button icon="check"
+               type="success"
+               text="Done" (onClick)="plusClick()">
+    </dx-button>
+
+</div>
+
+<dx-button text="00000000000">jjjjjjjjjjjjjjjj</dx-button>

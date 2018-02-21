@@ -1,0 +1,25 @@
+<div class="container text-center">
+    <h1 class="text-center">Заказы</h1>
+    <!--button mat-raised-button (click)="openDialog()">Open Dialog</button-->
+
+    <!-- Large modal -->
+
+    <div *ngFor="let d of dataForOutput">
+        <button type="button" class="col-3 btn btn-success mx-auto btn-in-order-list" >
+            Заказ № {{d.id}} от {{d.createdate}}
+        </button>
+
+        <button type="button"
+                class="btn btn-danger mx-auto btn-in-order-list"
+                attr.data-id="{{d.id}}"
+                (click)="openDialog($event)"
+                data-toggle="modal"
+                data-target="#exampleModal"
+        >
+            Удалить
+        </button>
+    </div>
+</div>
+
+
+<app-gridcomponent></app-gridcomponent>
